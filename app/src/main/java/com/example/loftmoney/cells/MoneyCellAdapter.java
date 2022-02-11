@@ -8,7 +8,10 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.example.loftmoney.R;
+
 import java.util.ArrayList;
+import java.util.List;
 
 public class MoneyCellAdapter extends RecyclerView.Adapter<MoneyCellAdapter.MoneyViewHolder> {
 
@@ -25,7 +28,7 @@ public class MoneyCellAdapter extends RecyclerView.Adapter<MoneyCellAdapter.Mone
     @Override
     public MoneyViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         LayoutInflater layoutInflater = LayoutInflater.from(parent.getContext());
-        return new MoneyViewHolder(layoutInflater.inflate(R.layout.cell_money, parent, attachToRoot: false));
+        return new MoneyViewHolder(layoutInflater.inflate(R.layout.cell_money, parent, false));
     }
 
     @Override
@@ -46,8 +49,8 @@ public class MoneyCellAdapter extends RecyclerView.Adapter<MoneyCellAdapter.Mone
         public MoneyViewHolder(@NonNull View itemView) {
             super(itemView);
 
-            titleTextView = itemView.findViewById(R.id.moneyCellTittleView);
-            valueTextView = itemView.findViewById(R.id.moneyCellValueView);
+            titleTextView = itemView.findViewById(R.id.money_cell_title_view);
+            valueTextView = itemView.findViewById(R.id.money_cell_value_view);
         }
 
         public void bind(MoneyItem moneyItem) {

@@ -3,10 +3,10 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:padding="16dp"
-    android:orientation="horyzontal">
+    android:orientation="horizontal">
 
     <androidx.appcompat.widget.AppCompatTextView
-        android:id="@+id/moneyCellTitleView"
+        android:id="@+id/money_cell_title_view"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:textColor="@android:color/black"
@@ -14,7 +14,7 @@
         android:textSize="16sp"/>
 
     <androidx.appcompat.widget.AppCompatCheckBox
-        android:id="@id/moneyCellValueView"
+        android:id="@+id/money_cell_value_view"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"

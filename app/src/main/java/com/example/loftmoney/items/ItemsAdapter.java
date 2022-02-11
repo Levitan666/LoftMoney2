@@ -29,7 +29,7 @@ public class ItemsAdapter extends RecyclerView.Adapter<ItemsAdapter.MoneyViewHol
     @Override
     public MoneyViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         LayoutInflater layoutInflater = LayoutInflater.from(parent.getContext());
-        View view = LayoutInflater.inflate(R.layout.item_money, parent, false);
+        View view = layoutInflater.inflate(R.layout.item_money, parent, false);
         return new MoneyViewHolder(view, itemAdapterClick);
     }
 
@@ -40,16 +40,10 @@ public class ItemsAdapter extends RecyclerView.Adapter<ItemsAdapter.MoneyViewHol
 
     @Override
     public int getItemCount() {
-        MenuBuilder itemList;
         return itemList.size();
     }
 
-    public class MoneyViewHolder {
-        public void bind(Item item) {
-        }
-    }
-
-static class MoneyViewHolder extends RecyclerView.ViewHolder {
+    static class MoneyViewHolder extends RecyclerView.ViewHolder {
 
         private TextView name;
         private TextView price;
@@ -68,5 +62,4 @@ static class MoneyViewHolder extends RecyclerView.ViewHolder {
             price.setText(item.getPrice());
         }
     }
-
 }

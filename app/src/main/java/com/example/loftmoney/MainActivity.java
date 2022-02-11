@@ -22,18 +22,10 @@ import com.google.android.material.tabs.TabLayoutMediator;
 import java.util.ArrayList;
 import java.util.List;
 
-public class MainActivity<implementation> extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity {
 
     TabLayout tabs;
     ViewPager2 pages;
-
-    private RecyclerView itemsView;
-
-    private MoneyCellAdapter moneyCellAdapter = new MoneyCellAdapter();
-    private String title;
-    private Object value;
-
-    implementation "androidx.recyclerview:recyclerview:1.2.1"
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -47,14 +39,10 @@ public class MainActivity<implementation> extends AppCompatActivity {
         TabLayoutMediator tabLayoutMediator = new TabLayoutMediator(tabs, pages, new TabLayoutMediator.TabConfigurationStrategy() {
             @Override
             public void onConfigureTab(@NonNull TabLayout.Tab tab, int position) {
-                tab.setText("getResources().getStringArray(R.array.main_pager_titles")[position]);
+                tab.setText(getResources().getStringArray(R.array.main_pages_titles)[position]);
             }
         });
         tabLayoutMediator.attach();
-
-        configureRecyclerView();
-
-        generateMoney();
     }
 
     @Override
@@ -62,23 +50,8 @@ public class MainActivity<implementation> extends AppCompatActivity {
         return super.findViewById(id);
     }
 
-    private void generateMoney() {
-        List<MoneyItem> moneyItems = new ArrayList<>();
-        moneyItems.add(new MoneyItem(title: "PS5", value: "30000P"));
-        moneyItems.add(new MoneyItem(title:"Salary", value: "300000P"));
 
-        moneyCellAdapter.setData(moneyItems);
-    }
 
-    private void configureRecyclerView() {
-        itemsView = findViewById(R.id.itemsView);
-        itemsView.setAdapter(moneyCellAdapter);
-
-        RecyclerView.LayoutManager layoutManager = new LinearLayoutManager(getApplicationContext(),
-                LinearLayoutManager.VERTICAL, false);
-
-        itemsView.setLayoutManager(layoutManager);
-    }
 
     private class MainPagerAdapter extends FragmentStateAdapter{
 
@@ -89,7 +62,6 @@ public class MainActivity<implementation> extends AppCompatActivity {
         @NonNull
         @Override
         public Fragment createFragment(int position) {
-
             return BudgetFragment.newInstance(position);
         }
 

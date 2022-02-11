@@ -1,5 +1,6 @@
-<?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <string name="app_name">LoftMoney</string>
+
     <array name="main_pages_titles">
         <item>Расходы</item>
         <item>Доходы</item>
