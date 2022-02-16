@@ -6,21 +6,19 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
-import androidx.appcompat.view.menu.MenuBuilder;
-import androidx.collection.CircularArray;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.loftmoney.R;
+import com.example.loftmoney.cells.MoneyItem;
 
 import java.util.ArrayList;
-import java.util.Collection;
 import java.util.List;
 
 public class ItemsAdapter extends RecyclerView.Adapter<ItemsAdapter.MoneyViewHolder> {
     private ItemAdapterClick itemAdapterClick;
     private List<Item> itemList = new ArrayList<>();
 
-    public void setData(List<Item> items){
+    public void setData(ArrayList<Item> items){
         itemList = items;
         notifyDataSetChanged();
 }
@@ -59,7 +57,7 @@ public class ItemsAdapter extends RecyclerView.Adapter<ItemsAdapter.MoneyViewHol
 
         public void bind(Item item) {
             name.setText(item.getName());
-            price.setText(item.getPrice());
+            price.setText(String.valueOf(item.getPrice()));
         }
     }
 }

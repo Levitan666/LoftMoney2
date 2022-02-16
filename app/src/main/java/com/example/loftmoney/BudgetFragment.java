@@ -9,6 +9,7 @@ import androidx.recyclerview.widget.DividerItemDecoration;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.provider.ContactsContract;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -16,6 +17,8 @@ import android.widget.LinearLayout;
 
 import com.example.loftmoney.cells.MoneyCellAdapter;
 import com.example.loftmoney.cells.MoneyItem;
+import com.example.loftmoney.items.Item;
+import com.example.loftmoney.items.ItemsAdapter;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -26,7 +29,7 @@ public class BudgetFragment extends Fragment {
 
     private RecyclerView itemsView;
     private int currentPosition;
-    private MoneyCellAdapter moneyCellAdapter = new MoneyCellAdapter();
+    private ItemsAdapter itemsAdapter = new ItemsAdapter();
 
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
@@ -38,9 +41,18 @@ public class BudgetFragment extends Fragment {
     private void configureRecyclerView() {
         itemsView = getView().findViewById(R.id.rv_items);
         RecyclerView.LayoutManager layoutManager = new LinearLayoutManager(getActivity());
+        itemsView.setLayoutManager(layoutManager);
+        itemsView.setAdapter(itemsAdapter);
 
         DividerItemDecoration dividerItemDecoration = new DividerItemDecoration(getActivity(), DividerItemDecoration.VERTICAL);
         itemsView.addItemDecoration(dividerItemDecoration);
+    }
+
+    private void generateData(){
+        ArrayList<Item> list = new ArrayList();
+        list.add(new Item("Молоко",   500));
+        list.add(new Item("Хлеб",   50));
+        itemsAdapter.setData(list);
     }
 
     @Override public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -54,7 +66,6 @@ public class BudgetFragment extends Fragment {
         moneyItems.add(new MoneyItem("PS5", "30000P"));
         moneyItems.add(new MoneyItem("Salary", "300000P"));
 
-        moneyCellAdapter.setData(moneyItems);
     }
 
     public static BudgetFragment newInstance(int position){
