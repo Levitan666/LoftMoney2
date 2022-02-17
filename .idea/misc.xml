@@ -5,6 +5,9 @@
       <map>
         <entry key="..\:/Users/Shark Sharp/AndroidStudioProjects/LoftMoney/app/src/main/res/layout/activity_add_item.xml" value="0.22826086956521738" />
         <entry key="..\:/Users/Shark Sharp/AndroidStudioProjects/LoftMoney/app/src/main/res/layout/activity_main.xml" value="0.264" />
+        <entry key="..\:/Users/Shark Sharp/AndroidStudioProjects/LoftMoney/app/src/main/res/layout/cell_money.xml" value="0.22826086956521738" />
+        <entry key="..\:/Users/Shark Sharp/AndroidStudioProjects/LoftMoney/app/src/main/res/layout/fragment_budget.xml" value="0.264" />
+        <entry key="..\:/Users/Shark Sharp/AndroidStudioProjects/LoftMoney/app/src/main/res/layout/item_money.xml" value="0.264" />
       </map>
     </option>
   </component>

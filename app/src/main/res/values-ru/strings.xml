@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">LoftMoney</string>
+
+    <array name="main_pages_titles">
+        <item>Расходы</item>
+        <item>Доходы</item>
+        <item>Баланс</item>
+    </array>
+</resources>
