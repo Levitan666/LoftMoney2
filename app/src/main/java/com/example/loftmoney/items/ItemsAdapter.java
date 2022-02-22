@@ -15,13 +15,14 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class ItemsAdapter extends RecyclerView.Adapter<ItemsAdapter.MoneyViewHolder> {
+
     private ItemAdapterClick itemAdapterClick;
     private List<Item> itemList = new ArrayList<>();
 
-    public void setData(ArrayList<Item> items){
+    public void setData(List<Item> items) {
         itemList = items;
         notifyDataSetChanged();
-}
+    }
 
     @NonNull
     @Override
@@ -47,17 +48,18 @@ public class ItemsAdapter extends RecyclerView.Adapter<ItemsAdapter.MoneyViewHol
         private TextView price;
         private ItemAdapterClick itemAdapterClick;
 
-        public MoneyViewHolder(View view, ItemAdapterClick itemAdapterClick){
-           super(view);
-           this.itemAdapterClick = itemAdapterClick;
-           this.name = view.findViewById(R.id.item_name);
-           this.price = view.findViewById(R.id.item_price);
-
+        public MoneyViewHolder(View view, ItemAdapterClick itemAdapterClick) {
+            super(view);
+            this.itemAdapterClick = itemAdapterClick;
+            this.name = view.findViewById(R.id.item_name);
+            this.price = view.findViewById(R.id.item_price);
         }
 
         public void bind(Item item) {
             name.setText(item.getName());
             price.setText(String.valueOf(item.getPrice()));
         }
+
     }
+
 }
