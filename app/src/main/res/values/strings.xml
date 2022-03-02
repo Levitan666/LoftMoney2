@@ -1,11 +1,30 @@
 <resources>
-    <string name="app_name">LoftMoney</string>
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
-    <string name="add_income">Add Income</string>
-    <array name="main_pages_titles">
-        <item>incomes</item>
+    <string name="app_name">Loftmoney</string>
+    <string name="expense_hint" translatable="false">Расход</string>
+    <string name="expense_name_hint" translatable="false">Название</string>
+    <string name="expense_action_add" translatable="false">Добавить</string>
+    <string name="welcome_login" translatable="false">Войти</string>
+    <string name="connection_lost" translatable="false">Sorry, we can\'t load your money list</string>
+    <string name="add_money" translatable="false">Add Income</string>
+    <string name="fill_fields" translatable="false">Please fill all fields</string>
+    <string name="success_added" translatable="false">Income was successfully added</string>
+    <string name="action_login" translatable="false">Войти</string>
+
+    <string name="client_secret" translatable="false">69219073253-bsinh5q5i2pfulf2voq79gk4jq340l1j.apps.googleusercontent.com</string>
+    <string name="client_id" translatable="false">jjZS9NF1MVx5nu4xM20A33F5</string>
+    <string name="title_expense" translatable="false">Расходы</string>
+    <string name="title_incomes" translatable="false">Доходы</string>
+    <string name="title_balance" translatable="false">Баланс</string>
+    <string name="title_dashboard" translatable="false">Учет бюджета</string>
+    <string name="selected" translatable="false">Выделено: </string>
+    <string name="delete_items_title" translatable="false">Вы уверены?</string>
+    <string name="delete_items_message" translatable="false">Вы точно хотите удалить выбранные расходы?</string>
+    <string name="action_no" translatable="false">Нет</string>
+    <string name="action_yes" translatable="false">Да</string>
+
+    <array name="main_pager_titles">
         <item>expenses</item>
+        <item>incomes</item>
         <item>balance</item>
     </array>
 </resources>

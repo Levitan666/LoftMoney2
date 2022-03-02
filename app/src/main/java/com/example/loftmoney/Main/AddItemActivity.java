@@ -1,10 +1,12 @@
- package com.example.loftmoney;
+ package com.example.loftmoney.Main;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Toast;
+
+import com.example.loftmoney.LoftApp;
 import com.example.loftmoney.databinding.ActivityAddItemBinding;
 import io.reactivex.android.schedulers.AndroidSchedulers;
 import io.reactivex.disposables.CompositeDisposable;

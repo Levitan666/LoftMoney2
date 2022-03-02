@@ -3,11 +3,20 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/Shark Sharp/AndroidStudioProjects/LoftMoney/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.2595" />
+        <entry key="..\:/Users/Shark Sharp/AndroidStudioProjects/LoftMoney/app/src/main/res/drawable/button_auth_background.xml" value="0.173" />
+        <entry key="..\:/Users/Shark Sharp/AndroidStudioProjects/LoftMoney/app/src/main/res/drawable/ic_add.xml" value="0.173" />
+        <entry key="..\:/Users/Shark Sharp/AndroidStudioProjects/LoftMoney/app/src/main/res/drawable/ic_google.xml" value="0.173" />
+        <entry key="..\:/Users/Shark Sharp/AndroidStudioProjects/LoftMoney/app/src/main/res/drawable/ic_launcher_background.xml" value="0.173" />
+        <entry key="..\:/Users/Shark Sharp/AndroidStudioProjects/LoftMoney/app/src/main/res/drawable/ic_logo.xml" value="0.173" />
         <entry key="..\:/Users/Shark Sharp/AndroidStudioProjects/LoftMoney/app/src/main/res/layout/activity_add_item.xml" value="0.22826086956521738" />
+        <entry key="..\:/Users/Shark Sharp/AndroidStudioProjects/LoftMoney/app/src/main/res/layout/activity_login.xml" value="0.264" />
         <entry key="..\:/Users/Shark Sharp/AndroidStudioProjects/LoftMoney/app/src/main/res/layout/activity_main.xml" value="0.264" />
-        <entry key="..\:/Users/Shark Sharp/AndroidStudioProjects/LoftMoney/app/src/main/res/layout/cell_money.xml" value="0.22826086956521738" />
-        <entry key="..\:/Users/Shark Sharp/AndroidStudioProjects/LoftMoney/app/src/main/res/layout/fragment_budget.xml" value="0.264" />
-        <entry key="..\:/Users/Shark Sharp/AndroidStudioProjects/LoftMoney/app/src/main/res/layout/item_money.xml" value="0.264" />
+        <entry key="..\:/Users/Shark Sharp/AndroidStudioProjects/LoftMoney/app/src/main/res/layout/activity_splash.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/Shark Sharp/AndroidStudioProjects/LoftMoney/app/src/main/res/layout/fragment_balance.xml" value="0.264" />
+        <entry key="..\:/Users/Shark Sharp/AndroidStudioProjects/LoftMoney/app/src/main/res/layout/fragment_dashboard.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/Shark Sharp/AndroidStudioProjects/LoftMoney/app/src/main/res/layout/fragment_money.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/Shark Sharp/AndroidStudioProjects/LoftMoney/app/src/main/res/layout/item_money.xml" value="0.25416666666666665" />
       </map>
     </option>
   </component>

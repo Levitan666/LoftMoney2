@@ -1,11 +1,16 @@
-package com.example.loftmoney.items;
+package com.example.loftmoney.fragments;
+
+import android.content.SharedPreferences;
 
 import androidx.lifecycle.MutableLiveData;
 import androidx.lifecycle.ViewModel;
 
 import java.util.List;
 
-import api.LoftAPI;
+import com.example.loftmoney.LoftApp;
+import com.example.loftmoney.api.LoftAPI;
+import com.example.loftmoney.items.Item;
+
 import io.reactivex.android.schedulers.AndroidSchedulers;
 import io.reactivex.disposables.CompositeDisposable;
 import io.reactivex.disposables.Disposable;
@@ -19,14 +24,15 @@ public class BudgetViewModel extends ViewModel {
     public MutableLiveData<String> messageInt = new MutableLiveData();
     public MutableLiveData<Boolean> swipeRefresh = new MutableLiveData<>(false);
 
-    public void loadData(LoftAPI loftAPI, int currentPosition) {
+    public void loadData(LoftAPI loftAPI, int currentPosition, SharedPreferences sharedPreferences) {
+        String authToken = sharedPreferences.getString(LoftApp.AUTH_KEY, "");
         String type;
         if (currentPosition == 0) {
             type = "expense";
         } else {
             type = "income";
         }
-        Disposable disposable = loftAPI.getItems(type)
+        Disposable disposable = loftAPI.getItems(type, authToken)
                 .subscribeOn(Schedulers.io())
                 .observeOn(AndroidSchedulers.mainThread())
                 .subscribe(remoteItems -> {

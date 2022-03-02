@@ -1,7 +1,10 @@
 package com.example.loftmoney;
+
 import android.app.Application;
 
-import api.LoftAPI;
+import com.example.loftmoney.api.LoftAPI;
+import com.example.loftmoney.api.AuthAPI;
+
 import okhttp3.OkHttpClient;
 import okhttp3.logging.HttpLoggingInterceptor;
 import retrofit2.Retrofit;
@@ -10,7 +13,9 @@ import retrofit2.converter.gson.GsonConverterFactory;
 
 public class LoftApp extends Application {
 
-   public LoftAPI loftAPI;
+    public static String AUTH_KEY = "authKey";
+    public LoftAPI loftAPI;
+    public AuthAPI authAPI;
 
     @Override
     public void onCreate() {
@@ -33,6 +38,7 @@ public class LoftApp extends Application {
                 .addCallAdapterFactory(RxJava2CallAdapterFactory.create())
                 .build();
 
-        loftAPI =retrofit.create(LoftAPI.class);
+        loftAPI = retrofit.create(LoftAPI.class);
+        authAPI = retrofit.create(AuthAPI.class);
     }
 }

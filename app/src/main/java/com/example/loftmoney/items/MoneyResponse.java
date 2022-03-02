@@ -1,4 +1,4 @@
-package api;
+package com.example.loftmoney.items;
 import com.example.loftmoney.items.Item;
 import com.google.gson.annotations.SerializedName;
 import java.util.List;

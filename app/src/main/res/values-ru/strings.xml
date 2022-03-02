@@ -1,9 +1,14 @@
 <resources>
     <string name="app_name">LoftMoney</string>
+    <string name="title_expense" translatable="false">Расходы</string>
+    <string name="title_incomes" translatable="false">Доходы</string>
+    <string name="title_balance" translatable="false">Баланс</string>
+    <string name="title_dashboard" translatable="false">Учет бюджета</string>
 
-    <array name="main_pages_titles">
+    <array name="main_pager_titles">
         <item>Расходы</item>
         <item>Доходы</item>
         <item>Баланс</item>
     </array>
+
 </resources>
