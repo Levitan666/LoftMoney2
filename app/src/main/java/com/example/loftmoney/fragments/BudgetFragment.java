@@ -1,4 +1,4 @@
-package com.example.loftmoney;
+package com.example.loftmoney.fragments;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -17,8 +17,12 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Toast;
 
-import com.example.loftmoney.items.BudgetViewModel;
+import com.example.loftmoney.FragmentBudgetBinding;
+import com.example.loftmoney.LoftApp;
+import com.example.loftmoney.R;
 import com.example.loftmoney.items.ItemsAdapter;
+
+import com.example.loftmoney.Main.AddItemActivity;
 
 public class BudgetFragment extends Fragment {
 
@@ -56,7 +60,8 @@ public class BudgetFragment extends Fragment {
         binding.swipeRefresh.setOnRefreshListener(new SwipeRefreshLayout.OnRefreshListener() {
             @Override
             public void onRefresh() {
-                mainViewModel.loadData( ((LoftApp) getActivity().getApplication()).loftAPI, currentPosition);
+                mainViewModel.loadData( ((LoftApp) getActivity().getApplication()).loftAPI, currentPosition,
+                        getActivity().getSharedPreferences(getString(R.string.app_name), 0));
             }
         });
 
@@ -74,7 +79,8 @@ public class BudgetFragment extends Fragment {
     public void onResume() {
         super.onResume();
 
-        mainViewModel.loadData(((LoftApp) getActivity().getApplication()).loftAPI, currentPosition);
+        mainViewModel.loadData(((LoftApp) getActivity().getApplication()).loftAPI, currentPosition,
+                getActivity().getSharedPreferences(getString(R.string.app_name), 0));
     }
 
     private void configureRecyclerView() {
